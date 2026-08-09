@@ -169,9 +169,9 @@
   .album-teaser { grid-template-columns: 1fr; justify-items: center; gap: 27px; text-align: center; }
   .coming-soon-cover { width: 205px; }
   .countdown { width: 100%; margin-top: 10px; }
-  .single-list { display: grid; grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .single-list { display: grid; grid-template-columns: 1fr; justify-items: center; width: min(100%, 330px); text-align: center; }
   .single-cover { flex-basis: 170px; width: 170px; }
-  .single-info { width: 100%; text-align: center; }.spotify-play { margin: 4px auto 0; }
+  .single-list .single-cover, .single-list .single-info, .single-list .spotify-play { justify-self: center; margin-inline: auto; }.single-info { display: flex; flex-direction: column; align-items: center; width: 100%; text-align: center; }.spotify-play { margin-top: 4px; }
   .videos-section { min-height: auto; padding: 82px 17px 64px; }
   .videos-section::after { inset: 8px; }
   .video-caption { flex-wrap: wrap; gap: 8px 12px; }
