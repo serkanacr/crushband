@@ -43,7 +43,7 @@
 .member-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .member-name { position: absolute; z-index: 1; width: 100%; overflow: hidden; color: #f8eee9; font: 700 clamp(64px, 11.8vw, 176px)/1.06 Verdana, Geneva, 'Segoe UI', sans-serif; letter-spacing: .005em; white-space: nowrap; pointer-events: none; }
 .member-name__track { display: flex; width: max-content; will-change: transform; }
-.member-name__track span { display: block; width: 100vw; padding: .035em .06em .09em 0; text-align: center; text-shadow: 0 7px 32px rgba(0,0,0,.32); }
+.member-name__track span { display: block; width: max-content; padding: .035em 28vw .09em 0; text-align: center; text-shadow: 0 7px 32px rgba(0,0,0,.32); }
 .member-name__track--right { animation: name-flow-right 11s linear infinite; }
 .member-name__track--left { animation: name-flow-left 11s linear infinite; }
 .member-name--first { top: 7%; }
@@ -83,7 +83,7 @@
 .single-cover img { width: 100%; height: 100%; object-fit: cover; }
 .single-cover span { position: absolute; z-index: 1; left: 12px; bottom: 11px; color: #fff; font: 700 21px/.8 Tahoma, sans-serif; letter-spacing: -.1em; }
 .spotify-play { display: inline-flex; align-items: center; gap: 10px; margin-left: auto; color: #f7eee8; font: 700 11px/1 Tahoma, sans-serif; letter-spacing: .05em; text-decoration: none; white-space: nowrap; transition: color .25s ease; }
-.spotify-play:hover { color: #d99a7d; }.spotify-play i { display: grid; width: 33px; height: 33px; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 10px; font-style: normal; }
+.spotify-play:hover { color: #d99a7d; }.spotify-play i { position: relative; display: grid; width: 33px; height: 33px; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-style: normal; }.spotify-play i::before { content: ''; display: block; width: 0; height: 0; margin-left: 2px; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 7px solid currentColor; }
 
 .videos-section { position: relative; min-height: 100svh; isolation: isolate; display: grid; place-items: center; padding: 88px 24px 70px; overflow: hidden; color: #f7eee8; background: #100505; }
 .videos-section::before { content: ''; position: absolute; inset: 0; z-index: -2; background: radial-gradient(ellipse 66% 65% at 50% 38%, #542022, #21090a 55%, #0e0505); }
@@ -131,7 +131,7 @@
   .members-section { min-height: 760px; }
   .members-section::after { inset: 8px; }
   .members-label { top: 26px; }
-  .member-stage { height: 650px; align-self: end; }
+  .member-stage { height: 650px; align-self: center; }
   .member-portrait { width: 220px; height: 350px; }
   .member-name { font-size: clamp(68px, 21vw, 102px); }
   .member-name--first { top: 13%; }

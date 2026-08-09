@@ -48,7 +48,7 @@ function DiscographySection() {
           <motion.div className="single-list" initial={{ opacity: 0, x: -28 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .5 }}>
             <div className="single-cover"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fd811e0b5320163d644d22d" alt="CRUSH! single kapağı" /></div>
             <div className="single-info"><p lang="en">SINGLE — 2026</p><h3>CRUSH!</h3><span>31 Temmuz 2026 · 2:28</span></div>
-            <a className="spotify-play" href="https://open.spotify.com/intl-tr/track/4uFIhAOi62bRG1OhmQfDB9?si=1679618422ed4d6b" target="_blank" rel="noreferrer" aria-label="CRUSH! şarkısını Spotify'da dinle"><i>▶</i> Spotify'da dinle</a>
+            <a className="spotify-play" href="https://open.spotify.com/intl-tr/track/4uFIhAOi62bRG1OhmQfDB9?si=1679618422ed4d6b" target="_blank" rel="noreferrer" aria-label="CRUSH! şarkısını Spotify'da dinle"><i aria-hidden="true" /> Spotify'da dinle</a>
           </motion.div>
         )}
       </div>
