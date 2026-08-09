@@ -15,11 +15,11 @@ function SocialsSection() {
         <p className="socials-intro">CRUSH’ı her yerde takip et.</p>
         <div className="social-grid">
           {socialLinks.map((social, index) => (
-            <a className="social-card" href={social.href} target="_blank" rel="noreferrer" key={social.name} style={{ '--delay': `${index * 55}ms` }} aria-label={`${social.name} hesabını yeni sekmede aç`}>
+            <motion.a className="social-card" href={social.href} target="_blank" rel="noreferrer" key={social.name} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }} transition={{ delay: index * .07, duration: .5, ease: [0.22, 1, 0.36, 1] }} aria-label={`${social.name} hesabını yeni sekmede aç`}>
               <svg viewBox="0 0 24 24" aria-hidden="true">{social.icon}</svg>
               <span>{social.name}</span><small>{social.handle}</small>
               <i aria-hidden="true" />
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>
@@ -28,3 +28,4 @@ function SocialsSection() {
 }
 
 export default SocialsSection
+import { motion } from 'framer-motion'
