@@ -6,7 +6,7 @@ const menuItems = [
   { label: 'Klipler', href: '#videos' },
   { label: 'Eras of Crush', href: '#eras' },
   { label: 'Konserler', href: '#concerts' },
-  { label: 'İletişim', href: '#' },
+  { label: 'Sosyal', href: '#social' },
 ]
 
 function CrushHeader() {
