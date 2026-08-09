@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { createPortal } from 'react-dom'
+import { useEffect, useState } from 'react'
 
 const photoFiles = [
   ['Arda', 'ARDA 🤍.jpg'],
@@ -15,6 +16,13 @@ const photos = photoFiles.map(([name, file]) => ({ name, source: `/eras/crush-er
 
 function ErasSection() {
   const [selectedPhoto, setSelectedPhoto] = useState(null)
+
+  useEffect(() => {
+    if (!selectedPhoto) return undefined
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = previousOverflow }
+  }, [selectedPhoto])
 
   return (
     <section className="eras-section" id="eras" aria-labelledby="eras-title">
@@ -48,16 +56,19 @@ function ErasSection() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {selectedPhoto && (
-          <motion.div className="lightbox" role="dialog" aria-modal="true" aria-label={`${selectedPhoto.name} photocard`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSelectedPhoto(null)}>
-            <motion.figure initial={{ opacity: 0, scale: .9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: .9, y: 20 }} transition={{ duration: .35 }} onClick={(event) => event.stopPropagation()}>
-              <img src={selectedPhoto.source} alt={`${selectedPhoto.name} — CRUSH! Era`} />
-              <figcaption>{selectedPhoto.name}<button onClick={() => setSelectedPhoto(null)} aria-label="Kapat">×</button></figcaption>
-            </motion.figure>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {createPortal(
+        <AnimatePresence>
+          {selectedPhoto && (
+            <motion.div className="lightbox" role="dialog" aria-modal="true" aria-label={`${selectedPhoto.name} photocard`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSelectedPhoto(null)}>
+              <motion.figure initial={{ opacity: 0, scale: .9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: .9, y: 20 }} transition={{ duration: .35 }} onClick={(event) => event.stopPropagation()}>
+                <img src={selectedPhoto.source} alt={`${selectedPhoto.name} — CRUSH! Era`} />
+                <figcaption>{selectedPhoto.name}<button onClick={() => setSelectedPhoto(null)} aria-label="Kapat">×</button></figcaption>
+              </motion.figure>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body,
+      )}
     </section>
   )
 }
