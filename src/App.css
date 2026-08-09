@@ -125,7 +125,7 @@
 .concerts-inner h2 { margin: 0; color: #f7eee8; font: 700 clamp(38px, 5vw, 66px)/1 Tahoma, 'Segoe UI', Arial, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
 .concerts-intro { margin: 18px 0 0; color: rgba(255,255,255,.62); font: 14px/1.4 Tahoma, 'Segoe UI', Arial, sans-serif; }
 .concert-list { display: grid; gap: 13px; margin-top: clamp(38px, 5vw, 56px); }
-.concert-card { display: grid; grid-template-columns: 116px 1fr auto; align-items: center; gap: 26px; padding: 18px 23px; border: 1px solid rgba(255,255,255,.2); background: rgba(14,3,4,.26); text-align: left; transition: border-color .25s ease, transform .25s ease; }.concert-card:hover { border-color: rgba(255,255,255,.43); transform: translateX(5px); }
+.concert-card { display: grid; grid-template-columns: 148px minmax(0, 1fr) auto; align-items: center; gap: 38px; padding: 25px 30px; border: 1px solid rgba(255,255,255,.2); background: rgba(14,3,4,.26); text-align: left; transition: border-color .25s ease, transform .25s ease; }.concert-card:hover { border-color: rgba(255,255,255,.43); transform: translateX(5px); }
 .concert-date { display: flex; align-items: center; gap: 12px; }.concert-date b { color: #f3e5dc; font: 700 65px/.75 Tahoma, sans-serif; letter-spacing: -.09em; }.concert-date span { color: #d99a7d; font: 700 12px/1 Tahoma, sans-serif; text-transform: uppercase; }.concert-date small { display: block; margin-top: 6px; color: rgba(255,255,255,.48); font: 600 8px/1 Tahoma, sans-serif; letter-spacing: .13em; }
 .concert-info p { margin: 0 0 8px; color: rgba(255,255,255,.55); font: 600 10px/1 Tahoma, sans-serif; letter-spacing: .13em; text-transform: uppercase; }.concert-info h3 { margin: 0; color: #f7eee8; font: 700 clamp(19px, 2.5vw, 28px)/1 Tahoma, sans-serif; letter-spacing: -.045em; }
 .sold-out { border: 1px solid rgba(225,120,103,.72); padding: 10px 13px; color: #ec9e91; font: 700 10px/1 Tahoma, sans-serif; letter-spacing: .13em; text-transform: uppercase; }.ticket-button { display: inline-flex; align-items: center; gap: 10px; padding: 12px 15px; color: #34090b; background: #f3e5dc; font: 700 10px/1 Tahoma, sans-serif; letter-spacing: .11em; text-decoration: none; text-transform: uppercase; }.ticket-button i, .concert-source span { font-style: normal; font-size: 15px; }
@@ -170,7 +170,9 @@
   .photocard-grid { grid-template-columns: repeat(2, minmax(120px, 180px)); justify-content: center; gap: 20px 17px; margin-top: 43px; }
   .photocard:last-child { grid-column: 1 / -1; width: calc(50% - 8px); justify-self: center; }
   .concerts-section { min-height: 760px; padding: 82px 15px 68px; }.concerts-section::after { inset: 8px; }
-  .concert-card { grid-template-columns: 82px 1fr; gap: 17px; padding: 17px; }.concert-date b { font-size: 51px; }.concert-info h3 { font-size: 19px; }.sold-out, .ticket-button { grid-column: 1 / -1; justify-self: start; }
+  .concert-card { grid-template-columns: 1fr; gap: 13px; padding: 22px 24px; }.concert-card:hover { transform: none; }
+  .concert-date { display: grid; grid-template-columns: 84px 1fr; align-items: center; gap: 13px; }.concert-date b { font-size: 58px; }.concert-date span { font-size: 13px; }.concert-date small { font-size: 9px; }
+  .concert-info p { margin-bottom: 9px; font-size: 10px; }.concert-info h3 { font-size: 21px; line-height: 1.18; letter-spacing: -.025em; }.sold-out, .ticket-button { justify-self: start; margin-top: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }

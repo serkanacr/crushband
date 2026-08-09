@@ -21,7 +21,7 @@ function ConcertsSection() {
             </article>
           ))}
         </div>
-        <a className="concert-source" href={ticketUrl} target="_blank" rel="noreferrer">Tüm etkinlikleri Bubilet’te gör <span>↗</span></a>
+        <a className="concert-source" href={ticketUrl} target="_blank" rel="noreferrer">Tüm etkinlikleri Bubilet’te gör</a>
       </div>
     </section>
   )
