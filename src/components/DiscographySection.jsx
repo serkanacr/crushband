@@ -47,7 +47,7 @@ function DiscographySection() {
         ) : (
           <motion.div className="single-list" initial={{ opacity: 0, x: -28 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .5 }}>
             <motion.div className="single-cover" initial={{ opacity: 0, scale: .86, rotate: -4 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: .55, ease: [0.22, 1, 0.36, 1] }}><img src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fd811e0b5320163d644d22d" alt="CRUSH! single kapağı" /></motion.div>
-            <motion.div className="single-info" initial={{ opacity: 0, y: 13 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .14, duration: .5, ease: [0.22, 1, 0.36, 1] }}><p lang="en">SINGLE — 2026</p><h3>CRUSH!</h3><span>31 Temmuz 2026 · 2:28</span></motion.div>
+            <motion.div className="single-info" initial={{ opacity: 0, x: 0, y: 13 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: .14, duration: .5, ease: [0.22, 1, 0.36, 1] }}><p lang="en">SINGLE — 2026</p><h3>CRUSH!</h3><span>31 Temmuz 2026 · 2:28</span></motion.div>
             <motion.a className="spotify-play" href="https://open.spotify.com/intl-tr/track/4uFIhAOi62bRG1OhmQfDB9?si=1679618422ed4d6b" target="_blank" rel="noreferrer" aria-label="CRUSH! şarkısını Spotify'da dinle" initial={{ opacity: 0, x: 14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: .25, duration: .45, ease: [0.22, 1, 0.36, 1] }}><i aria-hidden="true" /> Spotify'da dinle</motion.a>
           </motion.div>
         )}
